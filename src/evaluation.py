@@ -35,9 +35,6 @@ def eval_recipes(true: Result, pred: Result) -> list[str, float]:
     true_ingredients = [format_ingredient(i) for i in true.ingredients]
     pred_ingredients = [format_ingredient(i) for i in pred.ingredients]
 
-    print(true_ingredients)
-    print(pred_ingredients)
-
     ingredients_match, ingredients_distance = compare_lists(
         true_ingredients, pred_ingredients
     )

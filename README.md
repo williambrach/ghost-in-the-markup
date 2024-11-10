@@ -4,11 +4,11 @@
 # install
 
 ```
-conda create -n html python=3.12
+conda create -n ghost python=3.12
 ```
 
 ```
-conda activate html
+conda activate ghost
 ```
 
 ```
