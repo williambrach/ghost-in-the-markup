@@ -71,7 +71,7 @@ def predict(
         model=model,
         api_key=api_key,
         base_url=base_url,
-        temperature=0
+        temperature=0,
     )
     response.content = content
     return response
@@ -97,6 +97,7 @@ def compare(
         model=model,
         transformation=transformation,
     )
+    print(true.response.title)
     pred = predict(
         html=modified_html,
         prompt=prompt,
@@ -106,5 +107,6 @@ def compare(
         model=model,
         transformation=transformation,
     )
+    print(pred.response.title)
 
     return eval_func(true, pred)
