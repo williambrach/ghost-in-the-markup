@@ -63,4 +63,6 @@ with Only Few In-Context Demonstrations](https://arxiv.org/pdf/2310.06387)
 
 [protectai/rebuff](https://github.com/protectai/rebuff) # LLM Prompt Injection Detector
 
+[garak](https://github.com/NVIDIA/garak) # nice reference
+
 ## ai commercial tools / scrapers / web crawlers 
