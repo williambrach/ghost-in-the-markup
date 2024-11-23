@@ -31,6 +31,33 @@ LITELLM_API_KEY=
 LITELLM_URL=
 ```
 
+## defend strategy
+
+- Prompt Injection
+  - Insert invisible text into HTML that misleads LLMs
+  - Place injected prompts near the real data
+- Structural Defenses
+  -  Use dynamic class names
+  -  Make HTML structure more complex to force LLMs into more steps
+  -  Varying HTML structure to defeat pattern matching
+  -  Wont work with markdown
+- Content Deception
+  - Insert decoy data that appears valid but is incorrect
+  - Add multiple fake variations of sensitive data 
+- Token-Level Perturbations
+  - Replace non-essential tokens with meaningless characters
+  - Maintain semantic meaning while disrupting machine parsing
+  - Use strategic text perturbation based on Information Bottleneck principle
+  - Implement retokenization (breaking tokens into smaller components)
+- Content Obfuscation
+  - Use HTML entities and Unicode characters for encoding
+  - Implement text-to-image conversion for sensitive data
+  - Use ANSI escape sequences within HTML comments
+  - Create high-perplexity elements through invisible decoy content
+- Resource Exhaustion Techniques
+  - Design responses that fill up LLM context windows
+  - Maximize token usage to increase API costs for attackers
+
 ## research gap?
 
 #### Multi-Layer Defense Systems
@@ -42,6 +69,14 @@ Need for frameworks that adaptively apply different defenses
 Develop a system that combines multiple defense techniques  
 Use perplexity measures to dynamically adjust protection levels  
 Implement automated deployment and maintenance  
+
+- Multiple Defense Integration
+  - Use data prompt isolation with special delimiters
+  - Combine ANSI escape sequences with HTML comments
+  - Implement multiple misleading prompts for different data types
+  - Surround sensitive content with clear usage context
+
+
 
 
 #### Performance Impact Analysis
