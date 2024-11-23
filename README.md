@@ -31,6 +31,32 @@ LITELLM_API_KEY=
 LITELLM_URL=
 ```
 
+## research gap?
+
+#### Multi-Layer Defense Systems
+
+Current research focuses on single-layer defenses  
+Opportunity to develop integrated defense systems combining multiple techniques  
+Need for frameworks that adaptively apply different defenses  
+
+Develop a system that combines multiple defense techniques  
+Use perplexity measures to dynamically adjust protection levels  
+Implement automated deployment and maintenance  
+
+
+#### Performance Impact Analysis
+
+Limited research on the impact of defensive measures on legitimate users  
+Need for metrics beyond just Attack Success Rate  
+Balance between protection and user experience  
+
+Research methods to minimize impact on legitimate users  
+Develop metrics for measuring defense system overhead  
+Create guidelines for balancing protection and accessibility  
+
+
+
+
 
 ## docs
 
