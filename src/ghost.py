@@ -24,6 +24,7 @@ def extract(
             base_url=base_url,
             api_key=api_key,
             messages=[{"role": "user", "content": prompt}],
+            caching=False,
             temperature=temperature,
             max_tokens=max_tokens,
             response_format=response_object,
@@ -64,7 +65,6 @@ def predict(
     content = transform(html, transformation)
 
     prompt = prompt.format(content=content)
-
     response = extract(
         prompt=prompt,
         response_object=response_object,
