@@ -1,5 +1,6 @@
 # ghost-in-the-markup
 
+[tldrsec/prompt-injection-defenses](https://github.com/tldrsec/prompt-injection-defenses?tab=readme-ov-file)
 
 # install
 
@@ -75,23 +76,6 @@ Implement automated deployment and maintenance
   - Combine ANSI escape sequences with HTML comments
   - Implement multiple misleading prompts for different data types
   - Surround sensitive content with clear usage context
-
-
-
-
-#### Performance Impact Analysis
-
-Limited research on the impact of defensive measures on legitimate users  
-Need for metrics beyond just Attack Success Rate  
-Balance between protection and user experience  
-
-Research methods to minimize impact on legitimate users  
-Develop metrics for measuring defense system overhead  
-Create guidelines for balancing protection and accessibility  
-
-
-
-
 
 ## docs
 
@@ -205,11 +189,3 @@ with Only Few In-Context Demonstrations](https://arxiv.org/pdf/2310.06387)
 - Demonstrates how to create responses that maximize token usage to increase API costs for attackers
 - Shows how to design responses that fill up LLM context windows - This fills up the LLM's context window (the maximum amount of text it can process at once)
 - Provides methods to force LLMs into resource-intensive processing loops - Creates an infinite depth filesystem structure
-
-[tldrsec/prompt-injection-defenses](https://github.com/tldrsec/prompt-injection-defenses?tab=readme-ov-file)
-
-[protectai/rebuff](https://github.com/protectai/rebuff) # LLM Prompt Injection Detector
-
-[garak](https://github.com/NVIDIA/garak) # nice reference
-
-## ai commercial tools / scrapers / web crawlers 
