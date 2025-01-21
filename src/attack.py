@@ -121,7 +121,9 @@ def opf_wrap(original_html_bfs: BeautifulSoup) -> BeautifulSoup:
 
 
 ## Content overload
-def content_overload(original_html_bfs: BeautifulSoup, fake_token_len: int) -> BeautifulSoup:
+def content_overload(
+    original_html_bfs: BeautifulSoup, fake_token_len: int
+) -> BeautifulSoup:
     recipe_terms = [
         # Common recipe components
         "ingredients",

@@ -5,25 +5,21 @@
 # install
 
 ```
-conda create -n ghost python=3.12
-```
-
-```
-conda activate ghost
-```
-
-```
 pip install uv
-```
-
-```
-uv pip install -r requirements.txt
-```
-
-```
+source .venv/bin/activate
+uv sync
 playwright install chromium
 ```
 
+server prod
+```
+fastapi run --workers 10 http-server/main.py
+```
+
+server dev
+```
+fastapi dev http-server/main.py
+```
 
 ## .env
 
