@@ -1,5 +1,8 @@
+import re
+
 from bs4 import BeautifulSoup
 from markdownify import MarkdownConverter
+from markdownify import markdownify as md
 
 
 def bs2md(soup: BeautifulSoup, **options) -> str:
@@ -17,3 +20,10 @@ def bs2md(soup: BeautifulSoup, **options) -> str:
         '# Title\\n\\nSome **bold** text'
     """
     return MarkdownConverter(**options).convert_soup(soup)
+
+
+def html_str2md(html: str, **options) -> str:
+    markdown = md(html, **options)
+    # replace multiple \n to single one \n
+    markdown = re.sub(r"\n{2,}", "\n", markdown)
+    return markdown.strip()
