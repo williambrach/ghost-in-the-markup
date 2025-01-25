@@ -30,7 +30,7 @@ class ContentType:
 class IngredientItem(BaseModel):
     item: str = Field(
         None,
-        description="Name of the ingredient (e.g., 'All-purpose flour', 'Fresh basil') Dont include amount or unit in name (e.g., blocks,  can,   cans,  cup,  cups, head, inch, oz, pieces, pound, pounds, tablespoon, tablespoons, teaspoon, teaspoons)",
+        description="Name of the ingredient (e.g., 'All-purpose flour', 'Fresh basil') Don't include amount or unit in name (e.g., blocks,  can,   cans,  cup,  cups, head, inch, oz, pieces, pound, pounds, tablespoon, tablespoons, teaspoon, teaspoons)",
     )
     amount: Optional[float] = Field(
         None,
