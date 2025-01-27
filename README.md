@@ -2,28 +2,37 @@
 
 [tldrsec/prompt-injection-defenses](https://github.com/tldrsec/prompt-injection-defenses?tab=readme-ov-file)
 
+conf
+- https://www.kiv.zcu.cz/tsd2025/index.php?page=dates#
+- https://www.conll.org/
+- fruct
+
+## datasets to check
+
+- https://aclanthology.org/2020.coling-main.36.pdf
+- SWDE - https://academictorrents.com/details/411576c7e80787e4b40452360f5f24acba9b5159
+- re3d - https://github.com/dstl/re3d
+- WEIR - https://www.dia.uniroma3.it/db/weir/
+- https://github.com/juand-r/entity-recognition-datasets -> check the datasets
+
 # install
 
 ```
-conda create -n ghost python=3.12
-```
-
-```
-conda activate ghost
-```
-
-```
 pip install uv
-```
-
-```
-uv pip install -r requirements.txt
-```
-
-```
+source .venv/bin/activate
+uv sync
 playwright install chromium
 ```
 
+server prod
+```
+fastapi run --workers 10 http-server/main.py
+```
+
+server dev
+```
+fastapi dev http-server/main.py
+```
 
 ## .env
 
