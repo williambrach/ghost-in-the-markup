@@ -39,6 +39,7 @@ fastapi dev http-server/main.py
 ```
 LITELLM_API_KEY=
 LITELLM_URL=
+FILESYSTEM_PATH=src/data/true
 ```
 
 ## defend strategy
