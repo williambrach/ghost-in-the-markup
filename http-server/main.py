@@ -263,6 +263,40 @@ appendRandomElements(5, 1000000);
     // Call the function to add or append styles
     addOrAppendStyleTag(cssRules);
 });""",
+    "htmlAppend": """document.addEventListener('DOMContentLoaded', function () {
+    async function appendHTML(url) {
+        try {
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error(`Failed to fetch: ${response.status} ${response.statusText}`);
+            }
+            
+            const text = await response.text();
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(text, 'text/html');
+            
+            if (doc.body) {
+                const elements = [...doc.body.children];
+                elements.forEach(el => el.style.display = 'none');
+                document.body.prepend(...elements);
+            } else {
+                console.error('No body found in fetched HTML');
+            }
+            
+            if (doc.title) {
+                const titleDiv = document.createElement('div');
+                titleDiv.style.display = 'none';
+                titleDiv.textContent = doc.title;
+                document.body.prepend(titleDiv);
+            }
+        } catch (error) {
+            console.error('Error loading HTML:', error);
+        }
+    }
+
+    // Call appendHTML with the desired URL
+    appendHTML("http://127.0.0.1:8000/?file_path=dummy/recipe_10.html");
+})""",
 }
 logger.warning(f"Available methods: {list(scripts.keys())}")
 
