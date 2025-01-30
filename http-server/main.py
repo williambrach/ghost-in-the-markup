@@ -297,6 +297,40 @@ appendRandomElements(5, 1000000);
     // Call appendHTML with the desired URL
     appendHTML("http://127.0.0.1:8000/?file_path=dummy/recipe_10.html");
 })""",
+"shadowRootOpen": """document.addEventListener('DOMContentLoaded', function () {
+    var shadowHost = document.createElement('body');
+    var shadowRoot = shadowHost.attachShadow({mode: "open"});
+    var wrapper = document.createElement('body');
+
+    while (document.body.firstChild){
+        wrapper.appendChild(document.body.firstChild);
+    }
+
+    shadowRoot.appendChild(wrapper);
+
+    document.querySelectorAll("link[rel='stylesheet'], style").forEach(styleNode => {
+        shadowRoot.appendChild(styleNode.cloneNode(true));
+    });
+
+    document.documentElement.replaceChild(shadowHost, document.body)
+})""",
+"shadowRootClose": """document.addEventListener('DOMContentLoaded', function () {
+    var shadowHost = document.createElement('body');
+    var shadowRoot = shadowHost.attachShadow({mode: "closed"});
+    var wrapper = document.createElement('body');
+
+    while (document.body.firstChild){
+        wrapper.appendChild(document.body.firstChild);
+    }
+
+    shadowRoot.appendChild(wrapper);
+
+    document.querySelectorAll("link[rel='stylesheet'], style").forEach(styleNode => {
+        shadowRoot.appendChild(styleNode.cloneNode(true));
+    });
+
+    document.documentElement.replaceChild(shadowHost, document.body)
+})""",
 }
 logger.warning(f"Available methods: {list(scripts.keys())}")
 
