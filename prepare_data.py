@@ -5,7 +5,7 @@ from playwright.async_api import async_playwright
 SERVER_URL = "127.0.0.1:8000"
 TRUE_PATH = "src\\data\\true"
 GENERATED_PATH = "src\\data\\generated"
-METHODS = ["prompt_injection", "iframe", "obfuscation", "true", "htmlAppend", "shadowRootOpen", "shadowRootClose", "singlePromptInject"]  # "random_elements"
+METHODS = ["prompt_injection", "iframe", "obfuscation", "true", "htmlAppend", "shadowRootOpen", "shadowRootClose", "singlePromptInject", "responseObjNaN", "respButter", "prompt_injection2", "prompt_injection_all3", "prompt_injection_title", "prompt_injection_ingredients", "prompt_injection_instructions"]  # "random_elements"
 
 folders = [
     f for f in os.listdir(TRUE_PATH) if os.path.isdir(os.path.join(TRUE_PATH, f))
