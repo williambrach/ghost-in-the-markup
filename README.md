@@ -18,7 +18,8 @@ conf
 # install
 
 ```
-pip install uv
+curl -LsSf https://astral.sh/uv/install.sh | sh # https://docs.astral.sh/uv/getting-started/installation/
+uv venv --python 3.12
 source .venv/bin/activate
 uv sync
 playwright install chromium
