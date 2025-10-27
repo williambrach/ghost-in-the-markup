@@ -200,3 +200,16 @@ with Only Few In-Context Demonstrations](https://arxiv.org/pdf/2310.06387)
 - Demonstrates how to create responses that maximize token usage to increase API costs for attackers
 - Shows how to design responses that fill up LLM context windows - This fills up the LLM's context window (the maximum amount of text it can process at once)
 - Provides methods to force LLMs into resource-intensive processing loops - Creates an infinite depth filesystem structure
+
+# Citation
+
+```
+@inproceedings{brach2025ghosts,
+  title={Ghosts in the Markup: Techniques to Fight Large Language Model-Powered Web Scrapers},
+  author={Brach, William and Petrik, Matej and Ko{\v{s}}t’{\'a}l, Kristi{\'a}n and Ries, Michal},
+  booktitle={2025 37th Conference of Open Innovations Association (FRUCT)},
+  pages={37--46},
+  year={2025},
+  organization={IEEE}
+}
+```
